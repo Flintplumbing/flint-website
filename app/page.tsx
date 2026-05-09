@@ -104,32 +104,49 @@ export default function Home() {
   }
 
   return (
-    <main className="bg-[#151515] px-3 text-white md:px-6">
-      <div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-[#1f1f1f] shadow-2xl">
-        <section className="relative min-h-[76vh] overflow-hidden px-6 md:px-10">
+    <main className="bg-[#151515] px-2 text-white sm:px-4 md:px-6">
+      <div className="mx-auto max-w-6xl overflow-hidden rounded-[1.25rem] bg-[#1f1f1f] shadow-2xl md:rounded-[2rem]">
+        {/* HERO */}
+        <section className="relative min-h-[680px] overflow-hidden px-4 sm:px-6 md:min-h-[76vh] md:px-10">
           <div className="absolute inset-0">
-            <img src="/images/bathroom.jpg" alt="Luxury bathroom" className="h-full w-full object-cover object-center" />
-            <div className="absolute inset-0 bg-black/65" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
+            <img
+              src="/images/bathroom.jpg"
+              alt="Luxury bathroom"
+              className="h-full w-full object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/55 to-black/80 md:bg-gradient-to-r md:from-black/90 md:via-black/55 md:to-transparent" />
           </div>
 
-          <nav className="relative z-10 flex items-center justify-between py-6">
+          <nav className="relative z-10 flex items-center justify-between gap-4 py-5">
             <div>
-              <h2 className="text-3xl font-bold tracking-[0.25em]">FLINT.</h2>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.35em] text-neutral-300">Plumbing & Heating</p>
+              <h2 className="text-2xl font-bold tracking-[0.22em] md:text-3xl">
+                FLINT.
+              </h2>
+              <p className="mt-1 text-[8px] uppercase tracking-[0.28em] text-neutral-300 md:text-[10px]">
+                Plumbing & Heating
+              </p>
             </div>
 
-            <div className="flex items-center gap-6 md:gap-10">
-              <a href="/" className="text-xs font-semibold uppercase tracking-[0.18em] text-white">Home</a>
-              <a href="/services" className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-300 hover:text-white">Services</a>
-              <a href="/about" className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-300 hover:text-white">About</a>
-              <a href="#estimator" className="hidden rounded-full bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-black md:block">Estimate</a>
+            <div className="flex items-center gap-3 md:gap-10">
+              <a href="/" className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white md:text-xs">
+                Home
+              </a>
+              <a href="/services" className="text-[10px] font-semibold uppercase tracking-[0.14em] text-neutral-300 hover:text-white md:text-xs">
+                Services
+              </a>
+              <a href="/about" className="text-[10px] font-semibold uppercase tracking-[0.14em] text-neutral-300 hover:text-white md:text-xs">
+                About
+              </a>
+              <a href="#estimator" className="hidden rounded-full bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-black md:block">
+                Estimate
+              </a>
             </div>
           </nav>
 
-          <div className="relative z-10 flex min-h-[58vh] items-center">
+          <div className="relative z-10 flex min-h-[540px] items-center md:min-h-[58vh]">
             <div className="max-w-3xl">
-              <h1 className="text-5xl font-bold leading-[0.95] md:text-7xl">
+              <h1 className="text-[42px] font-bold leading-[0.92] sm:text-5xl md:text-7xl">
                 PLUMBING.
                 <br />
                 HEATING.
@@ -137,16 +154,16 @@ export default function Home() {
                 BATHROOMS.
               </h1>
 
-              <p className="mt-6 max-w-lg text-lg leading-relaxed text-neutral-200">
-                Modern plumbing, heating and bathroom installations across Newcastle,
-                Cramlington, Northumberland and the North East.
+              <p className="mt-5 max-w-lg text-base leading-relaxed text-neutral-200 md:text-lg">
+                Modern plumbing, heating and bathroom installations across
+                Newcastle, Cramlington, Northumberland and the North East.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a href="#estimator" className="rounded-full bg-white px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.18em] text-black">
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <a href="#estimator" className="rounded-full bg-white px-6 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-black">
                   Bathroom Estimator
                 </a>
-                <a href="#contact" className="rounded-full border border-white/40 px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.18em]">
+                <a href="#contact" className="rounded-full border border-white/40 px-6 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.16em]">
                   Book a Visit
                 </a>
               </div>
@@ -154,43 +171,65 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="estimator" className="px-4 py-10 text-black md:px-10">
-          <div className="rounded-[2rem] bg-[#E7E2DA] p-4 md:p-8">
-            <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+        {/* ESTIMATOR */}
+        <section id="estimator" className="px-3 py-8 text-black sm:px-4 md:px-10 md:py-10">
+          <div className="rounded-[1.5rem] bg-[#E7E2DA] p-4 md:rounded-[2rem] md:p-8">
+            <div className="mb-6 flex flex-col gap-4 md:mb-8 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="mb-3 text-xs uppercase tracking-[0.3em] text-neutral-600">Bathroom Estimator</p>
-                <h2 className="text-4xl font-bold md:text-5xl">Build your guide quote.</h2>
+                <p className="mb-2 text-[10px] uppercase tracking-[0.25em] text-neutral-600 md:text-xs">
+                  Bathroom Estimator
+                </p>
+                <h2 className="text-3xl font-bold leading-tight md:text-5xl">
+                  Build your guide quote.
+                </h2>
               </div>
 
-              <div className="rounded-2xl bg-black px-6 py-4 text-white">
-                <p className="text-xs uppercase tracking-[0.25em] text-neutral-400">Estimated Range</p>
-                <p className="mt-1 text-2xl font-bold">£{low.toLocaleString()} – £{high.toLocaleString()}</p>
+              <div className="rounded-2xl bg-black px-5 py-4 text-white">
+                <p className="text-[10px] uppercase tracking-[0.22em] text-neutral-400 md:text-xs">
+                  Estimated Range
+                </p>
+                <p className="mt-1 text-xl font-bold md:text-2xl">
+                  £{low.toLocaleString()} – £{high.toLocaleString()}
+                </p>
               </div>
             </div>
 
-            <div className="rounded-[2rem] bg-white p-5 shadow-2xl md:p-8">
-              <div className="mb-7 flex gap-2">
+            <div className="rounded-[1.5rem] bg-white p-4 shadow-2xl md:rounded-[2rem] md:p-8">
+              <div className="mb-6 flex gap-2 md:mb-7">
                 {[1, 2, 3, 4].map((number) => (
-                  <div key={number} className={`h-2 flex-1 rounded-full ${number <= step ? "bg-black" : "bg-neutral-200"}`} />
+                  <div
+                    key={number}
+                    className={`h-2 flex-1 rounded-full ${
+                      number <= step ? "bg-black" : "bg-neutral-200"
+                    }`}
+                  />
                 ))}
               </div>
 
               {step === 1 && (
                 <div>
-                  <h3 className="text-2xl font-bold">How big is your bathroom?</h3>
-                  <p className="mt-2 text-sm text-neutral-600">Pick the closest room layout.</p>
+                  <h3 className="text-xl font-bold md:text-2xl">
+                    How big is your bathroom?
+                  </h3>
+                  <p className="mt-2 text-sm text-neutral-600">
+                    Pick the closest room layout.
+                  </p>
 
-                  <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  <div className="mt-5 grid gap-3 md:mt-6 md:grid-cols-3">
                     {sizes.map((item) => (
                       <button
                         key={item.id}
                         onClick={() => setSize(item)}
-                        className={`rounded-3xl border p-5 text-left transition ${
-                          size.id === item.id ? "border-black bg-black text-white" : "border-neutral-200 hover:bg-neutral-50"
+                        className={`rounded-2xl border p-4 text-left transition md:rounded-3xl md:p-5 ${
+                          size.id === item.id
+                            ? "border-black bg-black text-white"
+                            : "border-neutral-200 hover:bg-neutral-50"
                         }`}
                       >
                         <BathroomLayout type={item.id} active={size.id === item.id} />
-                        <h4 className="mt-5 text-xl font-semibold">{item.name}</h4>
+                        <h4 className="mt-4 text-lg font-semibold md:text-xl">
+                          {item.name}
+                        </h4>
                         <p className="mt-1 text-sm opacity-70">{item.desc}</p>
                       </button>
                     ))}
@@ -200,10 +239,14 @@ export default function Home() {
 
               {step === 2 && (
                 <div>
-                  <h3 className="text-2xl font-bold">Bathroom style & upgrades</h3>
-                  <p className="mt-2 text-sm text-neutral-600">Bath, toilet and basin are included as standard.</p>
+                  <h3 className="text-xl font-bold md:text-2xl">
+                    Bathroom style & upgrades
+                  </h3>
+                  <p className="mt-2 text-sm text-neutral-600">
+                    Bath, toilet and basin are included as standard.
+                  </p>
 
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                     <Toggle label="Freestanding bath" value={freestandingBath} setValue={setFreestandingBath} />
                     <Toggle label="Wall hung toilet" value={wallHungToilet} setValue={setWallHungToilet} />
                     <Toggle label="Floating vanity unit" value={floatingVanity} setValue={setFloatingVanity} />
@@ -222,10 +265,12 @@ export default function Home() {
 
               {step === 3 && (
                 <div>
-                  <h3 className="text-2xl font-bold">Wall & floor finish</h3>
-                  <p className="mt-2 text-sm text-neutral-600">Choose tiles or cladding, then select your floor option.</p>
+                  <h3 className="text-xl font-bold md:text-2xl">Wall & floor finish</h3>
+                  <p className="mt-2 text-sm text-neutral-600">
+                    Choose tiles or cladding, then select your floor option.
+                  </p>
 
-                  <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  <div className="mt-5 grid gap-3 md:grid-cols-3">
                     <Choice active={wallFinish === "half"} onClick={() => setWallFinish("half")} title="Half-height tiles" text="Standard tiled finish." />
                     <Choice active={wallFinish === "full"} onClick={() => setWallFinish("full")} title="Full-height tiles" text="Fully tiled premium finish." />
                     <Choice active={wallFinish === "cladding"} onClick={() => setWallFinish("cladding")} title="Wall cladding" text="Modern panel finish at £100/m²." />
@@ -241,12 +286,12 @@ export default function Home() {
                   </button>
 
                   {wallFinish !== "cladding" && (
-                    <div className="mt-6 grid gap-3 md:grid-cols-3">
+                    <div className="mt-5 grid gap-2 md:grid-cols-3">
                       {tileQualities.map((item) => (
                         <button
                           key={item.id}
                           onClick={() => setTileQuality(item)}
-                          className={`rounded-2xl border p-4 text-left font-semibold ${
+                          className={`rounded-2xl border p-4 text-left text-sm font-semibold ${
                             tileQuality.id === item.id ? "border-black bg-black text-white" : "border-neutral-200 hover:bg-neutral-50"
                           }`}
                         >
@@ -260,27 +305,40 @@ export default function Home() {
 
               {step === 4 && (
                 <div>
-                  <h3 className="text-2xl font-bold">Your guide estimate</h3>
-                  <p className="mt-2 text-sm text-neutral-600">Final quote confirmed after a home visit.</p>
+                  <h3 className="text-xl font-bold md:text-2xl">Your guide estimate</h3>
+                  <p className="mt-2 text-sm text-neutral-600">
+                    Final quote confirmed after a home visit.
+                  </p>
 
-                  <div className="mt-6 rounded-3xl bg-black p-7 text-white">
-                    <p className="text-sm uppercase tracking-[0.25em] text-neutral-400">Estimated Price</p>
-                    <p className="mt-3 text-5xl font-bold">£{low.toLocaleString()} – £{high.toLocaleString()}</p>
-                    <p className="mt-6 max-w-2xl text-sm leading-relaxed text-neutral-400">
-                      Estimate includes bathroom installation, plumbing work, wall finish, flooring choice and selected upgrades.
+                  <div className="mt-5 rounded-2xl bg-black p-5 text-white md:rounded-3xl md:p-7">
+                    <p className="text-[10px] uppercase tracking-[0.22em] text-neutral-400 md:text-sm">
+                      Estimated Price
                     </p>
-                    <a href="#contact" className="mt-8 inline-block rounded-full bg-white px-7 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-black">
+
+                    <p className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">
+                      £{low.toLocaleString()} – £{high.toLocaleString()}
+                    </p>
+
+                    <p className="mt-5 max-w-2xl text-sm leading-relaxed text-neutral-400">
+                      Estimate includes bathroom installation, plumbing work,
+                      wall finish, flooring choice and selected upgrades.
+                    </p>
+
+                    <a
+                      href="#contact"
+                      className="mt-6 inline-block rounded-full bg-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-black md:px-7 md:py-4"
+                    >
                       Get a Proper Quote
                     </a>
                   </div>
                 </div>
               )}
 
-              <div className="mt-8 flex justify-between">
-                <button onClick={() => setStep(Math.max(1, step - 1))} className="rounded-full border border-black/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em]">
+              <div className="mt-7 flex justify-between">
+                <button onClick={() => setStep(Math.max(1, step - 1))} className="rounded-full border border-black/20 px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.16em]">
                   Back
                 </button>
-                <button onClick={() => setStep(Math.min(4, step + 1))} className="rounded-full bg-black px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white">
+                <button onClick={() => setStep(Math.min(4, step + 1))} className="rounded-full bg-black px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-white">
                   {step === 4 ? "Done" : "Next"}
                 </button>
               </div>
@@ -288,18 +346,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="px-4 pb-10 md:px-10">
-          <div className="grid gap-5 rounded-[2rem] bg-[#2b2b2b] p-5 md:grid-cols-2 md:p-8">
+        {/* CONTACT */}
+        <section id="contact" className="px-3 pb-8 sm:px-4 md:px-10 md:pb-10">
+          <div className="grid gap-5 rounded-[1.5rem] bg-[#2b2b2b] p-5 md:grid-cols-2 md:rounded-[2rem] md:p-8">
             <div>
-              <p className="mb-3 text-xs uppercase tracking-[0.3em] text-neutral-400">Get a Proper Quote</p>
-              <h2 className="text-4xl font-bold">Book a visit.</h2>
+              <p className="mb-3 text-[10px] uppercase tracking-[0.25em] text-neutral-400 md:text-xs">
+                Get a Proper Quote
+              </p>
+              <h2 className="text-3xl font-bold md:text-4xl">Book a visit.</h2>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-300">
                 Send a few details and FLINT. can arrange a visit to confirm the price properly.
               </p>
 
-              <div className="mt-8 rounded-2xl bg-black/30 p-5 text-sm text-neutral-300">
+              <div className="mt-6 rounded-2xl bg-black/30 p-5 text-sm text-neutral-300 md:mt-8">
                 <p className="text-white">Your current guide estimate:</p>
-                <p className="mt-2 text-2xl font-bold text-white">£{low.toLocaleString()} – £{high.toLocaleString()}</p>
+                <p className="mt-2 text-xl font-bold text-white md:text-2xl">
+                  £{low.toLocaleString()} – £{high.toLocaleString()}
+                </p>
               </div>
             </div>
 
@@ -309,7 +372,7 @@ export default function Home() {
               <input value={postcode} onChange={(e) => setPostcode(e.target.value)} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm outline-none" placeholder="Postcode" />
               <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="min-h-32 rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm outline-none" placeholder="Tell us briefly what you need" />
 
-              <button type="button" onClick={sendQuote} className="rounded-full bg-white px-6 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-black">
+              <button type="button" onClick={sendQuote} className="rounded-full bg-white px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-black">
                 {sending ? "Sending..." : "Send Enquiry"}
               </button>
 
@@ -318,16 +381,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="px-4 pb-10 md:px-10">
-          <div className="rounded-[2rem] bg-[#E7E2DA] p-8 text-black md:p-12">
-            <p className="text-xs uppercase tracking-[0.3em] text-neutral-600">Prefer to talk?</p>
-            <h2 className="mt-4 text-4xl font-bold md:text-5xl">Or just give me a ring.</h2>
-            <a href="tel:07932423309" className="mt-6 block text-5xl font-bold tracking-tight md:text-7xl">07932423309</a>
+        {/* PHONE */}
+        <section className="px-3 pb-8 sm:px-4 md:px-10 md:pb-10">
+          <div className="rounded-[1.5rem] bg-[#E7E2DA] p-6 text-black md:rounded-[2rem] md:p-12">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-neutral-600 md:text-xs">
+              Prefer to talk?
+            </p>
+            <h2 className="mt-4 text-3xl font-bold md:text-5xl">
+              Or just give me a ring.
+            </h2>
+            <a href="tel:07932423309" className="mt-5 block break-words text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl">
+              07932423309
+            </a>
           </div>
         </section>
 
-        <footer className="border-t border-white/5 px-6 py-8 text-sm text-neutral-400">
-          <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-4">
+        <footer className="border-t border-white/5 px-5 py-8 text-sm text-neutral-400 md:px-6">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
             <div>
               <h2 className="text-2xl font-bold tracking-[0.25em] text-white">FLINT.</h2>
               <p className="mt-2 text-[10px] uppercase tracking-[0.35em]">Plumbing & Heating</p>
@@ -352,8 +422,8 @@ function Toggle({ label, value, setValue }: { label: string; value: boolean; set
 
 function Choice({ active, onClick, title, text }: { active: boolean; onClick: () => void; title: string; text: string }) {
   return (
-    <button onClick={onClick} className={`rounded-3xl border p-6 text-left ${active ? "border-black bg-black text-white" : "border-neutral-200 hover:bg-neutral-50"}`}>
-      <h4 className="text-xl font-semibold">{title}</h4>
+    <button onClick={onClick} className={`rounded-2xl border p-4 text-left md:rounded-3xl md:p-6 ${active ? "border-black bg-black text-white" : "border-neutral-200 hover:bg-neutral-50"}`}>
+      <h4 className="text-lg font-semibold md:text-xl">{title}</h4>
       <p className="mt-2 text-sm opacity-70">{text}</p>
     </button>
   );
@@ -363,7 +433,7 @@ function BathroomLayout({ type, active }: { type: string; active: boolean }) {
   const stroke = active ? "white" : "black";
 
   return (
-    <svg viewBox="0 0 140 100" className="h-28 w-full rounded-2xl bg-white/10" fill="none">
+    <svg viewBox="0 0 140 100" className="h-24 w-full rounded-2xl bg-white/10 md:h-28" fill="none">
       <rect x="10" y="10" width="120" height="80" rx="5" stroke={stroke} strokeWidth="3" />
       <rect x="18" y="18" width={type === "small" ? "38" : type === "medium" ? "44" : "52"} height="20" rx="4" stroke={stroke} strokeWidth="3" />
       <circle cx={type === "small" ? "55" : type === "medium" ? "78" : "100"} cy={type === "small" ? "60" : "68"} r="10" stroke={stroke} strokeWidth="3" />
