@@ -1,182 +1,82 @@
+﻿const phoneNumber = "07932 423309";
+const phoneHref = "tel:07932423309";
+
+const values = [
+  ["Reliable", "We turn up when we say we will and keep you updated from start to finish."],
+  ["Straightforward", "Clear advice, honest pricing and no pressure to choose work you do not need."],
+  ["Quality finish", "Tidy pipework, clean working habits and a finish that feels properly looked after."],
+];
+
+const areas = ["Newcastle", "Cramlington", "Blyth", "Whitley Bay", "Morpeth", "Northumberland", "North Tyneside", "Gateshead"];
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#151515] px-2 py-2 text-white sm:px-4 md:px-6 md:py-3">
-      <div className="mx-auto max-w-6xl overflow-hidden rounded-[1.25rem] bg-[#1f1f1f] shadow-2xl md:rounded-[2rem]">
-        {/* HERO */}
-        <section className="relative min-h-[640px] overflow-hidden px-4 sm:px-6 md:h-[60vh] md:min-h-[520px] md:px-10">
-          <div className="absolute inset-0">
-            <img
-              src="/images/about/about-main.jpg"
-              alt="FLINT plumbing and heating"
-              className="h-full w-full object-cover object-center"
-            />
+    <main className="min-h-screen overflow-x-hidden flint-page-texture flint-subtle-grain text-[#f2eee8]">
+      <div className="mx-auto max-w-[1500px] overflow-hidden flint-page-texture shadow-2xl shadow-black/40">
+      <SiteHeader active="About" />
 
-            <div className="absolute inset-0 bg-black/70" />
-
-            <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/55 to-black/80 md:bg-gradient-to-r md:from-black/90 md:via-black/55 md:to-transparent" />
+      <section className="px-5 py-20 sm:px-8 lg:px-14 xl:px-20">
+        <div className="max-w-5xl">
+          <p className="text-[12px] font-bold uppercase tracking-[0.26em] text-[#b89572]">About FLINT</p>
+          <h1 className="mt-6 text-5xl font-black uppercase leading-none tracking-[0.03em] text-white sm:text-6xl lg:text-8xl">
+            Local plumbing with the customer in mind.
+          </h1>
+          <div className="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-[#d5ccc0]">
+            <p>
+              FLINT Plumbing is a local plumbing and heating company built around honest work, fair prices and treating every customer properly.
+            </p>
+            <p>
+              The aim is simple: give clear advice, do quality work, and never take advantage of customers when they need help. Whether it is a small repair, heating issue, bathroom job or emergency call-out, the focus is always on finding the right solution at a fair price.
+            </p>
+            <p>
+              We work with homeowners and local property contacts across Newcastle, Cramlington, Northumberland and the surrounding North East areas.
+            </p>
+            <p>
+              Reliable workmanship matters on every job. All engineers are qualified and experienced in the plumbing industry, with ACS and City & Guilds training, plus Gas Safe registered engineers for relevant gas work. Every job is approached safely, neatly and to a high standard.
+            </p>
+            <p>
+              FLINT also works with landlords and letting agents who need dependable plumbing support for rental properties, maintenance call-outs, repairs and clear communication when tenants need help quickly.
+            </p>
+            <p>
+              As a local business, FLINT is proud to work within the local community. The goal is to build long-term trust with customers by being approachable, fair, respectful and consistent on every visit.
+            </p>
           </div>
+        </div>
+      </section>
 
-          <nav className="relative z-10 flex items-center justify-between gap-4 py-5 md:py-6">
-            <div>
-              <h1 className="text-2xl font-bold tracking-[0.22em] md:text-3xl">
-                FLINT.
-              </h1>
-
-              <p className="mt-1 text-[8px] uppercase tracking-[0.28em] text-neutral-300 md:text-[10px]">
-                Plumbing & Heating
-              </p>
-            </div>
-
-            <div className="flex items-center gap-3 md:gap-10">
-              <a
-                href="/"
-                className="text-[10px] font-semibold uppercase tracking-[0.14em] text-neutral-300 hover:text-white md:text-xs md:tracking-[0.18em]"
-              >
-                Home
-              </a>
-
-              <a
-                href="/services"
-                className="text-[10px] font-semibold uppercase tracking-[0.14em] text-neutral-300 hover:text-white md:text-xs md:tracking-[0.18em]"
-              >
-                Services
-              </a>
-
-              <a
-                href="/about"
-                className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white md:text-xs md:tracking-[0.18em]"
-              >
-                About
-              </a>
-
-              <a
-                href="/#estimator"
-                className="hidden rounded-full bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-black md:block"
-              >
-                Estimate
-              </a>
-            </div>
-          </nav>
-
-          <div className="relative z-10 flex min-h-[520px] items-center md:h-[calc(60vh-96px)] md:min-h-[400px]">
-            <div className="max-w-3xl">
-              <p className="mb-4 text-[10px] uppercase tracking-[0.25em] text-neutral-400 md:text-xs md:tracking-[0.3em]">
-                About FLINT.
-              </p>
-
-              <h2 className="text-[39px] font-bold leading-[0.92] sm:text-5xl md:text-7xl">
-                CLEAN WORK.
-                <br />
-                HONEST PRICES.
-                <br />
-                PROPER FINISH.
-              </h2>
-
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-neutral-200 md:mt-6">
-                A modern plumbing and heating company built around simple
-                communication, reliable work and a high-quality finish.
-              </p>
-
-              <a
-                href="/#estimator"
-                className="mt-7 inline-block rounded-full bg-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-black md:hidden"
-              >
-                Get Estimate
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* INFO CARDS */}
-        <section className="grid gap-3 px-3 py-6 sm:px-4 md:grid-cols-3 md:gap-4 md:px-10">
-          {[
-            ["Reliable", "Turn up when agreed and keep the job moving."],
-            ["Clean", "Respectful work, tidy finish and minimal mess."],
-            ["Straightforward", "Clear pricing, simple advice and no pressure."],
-          ].map(([title, text]) => (
-            <div
-              key={title}
-              className="rounded-[1.5rem] border border-white/5 bg-[#262626] p-5 md:rounded-[2rem] md:p-8"
-            >
-              <h3 className="text-2xl font-bold">{title}</h3>
-
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                {text}
-              </p>
-            </div>
+      <section className="px-5 py-14 sm:px-8 lg:px-14 xl:px-20">
+        <div className="grid gap-5 md:grid-cols-3">
+          {values.map(([title, text]) => (
+            <article key={title} className="rounded-lg border border-[#b89572]/25 flint-card-texture p-8">
+              <h2 className="text-3xl font-black uppercase tracking-[0.04em] text-white">{title}</h2>
+              <p className="mt-5 text-sm leading-7 text-[#d5ccc0]">{text}</p>
+            </article>
           ))}
-        </section>
+        </div>
+      </section>
 
-        {/* AREAS */}
-        <section className="px-3 pb-8 sm:px-4 md:px-10 md:pb-10">
-          <div className="rounded-[1.5rem] bg-[#E7E2DA] p-6 text-black md:rounded-[2rem] md:p-12">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-neutral-600 md:text-xs md:tracking-[0.3em]">
-              Areas Covered
-            </p>
-
-            <h3 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">
-              Plumbing, heating and bathrooms across the North East.
-            </h3>
-
-            <div className="mt-6 flex flex-wrap gap-2 md:mt-8">
-              {[
-                "Newcastle",
-                "Cramlington",
-                "Blyth",
-                "Whitley Bay",
-                "Morpeth",
-                "Northumberland",
-                "North Tyneside",
-                "Gateshead",
-              ].map((area) => (
-                <span
-                  key={area}
-                  className="rounded-full bg-black px-3 py-2 text-xs text-white md:px-4 md:text-sm"
-                >
-                  {area}
-                </span>
-              ))}
-            </div>
+      <section className="px-5 pb-14 sm:px-8 lg:px-14 xl:px-20">
+        <div className="rounded-lg border border-[#b89572]/35 flint-card-texture p-8 lg:p-12">
+          <p className="text-[12px] font-bold uppercase tracking-[0.26em] text-[#b89572]">Areas covered</p>
+          <h2 className="mt-5 max-w-4xl text-4xl font-black uppercase leading-tight text-white lg:text-6xl">Plumbing and heating across Newcastle, Cramlington, Northumberland and nearby areas.</h2>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {areas.map((area) => <span key={area} className="rounded-sm border border-[#b89572]/35 bg-[#2c2c2c] px-4 py-3 text-sm font-semibold text-[#eee8df]">{area}</span>)}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* FOOTER */}
-        <footer className="border-t border-white/5 px-5 py-8 text-sm text-neutral-400 md:px-10">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
-            <div>
-              <h2 className="text-2xl font-bold tracking-[0.25em] text-white">
-                FLINT.
-              </h2>
-
-              <p className="mt-2 text-[10px] uppercase tracking-[0.35em]">
-                Plumbing & Heating
-              </p>
-            </div>
-
-            <p>
-              Plumbing
-              <br />
-              Heating
-              <br />
-              Bathrooms
-            </p>
-
-            <p className="break-words">
-              07932423309
-              <br />
-              flint.plumbing.heating@gmail.com
-            </p>
-
-            <p>
-              Newcastle
-              <br />
-              Cramlington
-              <br />
-              Northumberland
-            </p>
-          </div>
-        </footer>
+      <SiteFooter />
       </div>
     </main>
   );
 }
+
+function SiteHeader({ active }: { active: string }) {
+  const items = [["Home", "/"], ["Services", "/services"], ["About", "/about"]];
+  return <>`r`n    <nav className="relative flex items-center justify-between gap-6 flint-nav-texture min-h-[120px] px-5 py-4 shadow-2xl sm:min-h-[140px] lg:min-h-[150px] shadow-black/30 sm:px-8 lg:px-14 xl:px-20"><a href="/" aria-label="FLINT Plumbing home" className="block min-h-20 w-36 shrink-0 sm:w-56 lg:w-80" /><div className="hidden items-center gap-10 lg:absolute lg:left-1/2 lg:flex lg:-translate-x-1/2">{items.map(([label, href]) => <a key={label} href={href} className={`text-sm font-semibold uppercase tracking-[0.2em] transition hover:text-[#c9a47d] ${active === label ? "text-[#c9a47d]" : "text-[#eee8df]"}`}>{label}</a>)}</div><a href={phoneHref} className="inline-flex items-center gap-2 rounded-sm border border-[#d7b690]/45 flint-bronze-cta px-2.5 py-2 text-xs font-black uppercase tracking-[0.1em] shadow-xl shadow-black/25 hover:brightness-110 sm:gap-3 sm:px-4 sm:text-lg lg:px-5 lg:text-xl"><svg viewBox="0 0 24 24" className="h-6 w-6 text-[#111110]" fill="currentColor" aria-hidden="true"><path d="M6.6 3.8 9 6.2 7.4 9c1.3 2.7 3.4 4.8 6.1 6.1l2.8-1.6 2.4 2.4-1.1 3.2c-.3.8-1.1 1.2-1.9 1.1C9.3 19.2 4.8 14.7 3.8 8.3c-.1-.8.3-1.6 1.1-1.9l1.7-.6Z" /></svg><span>{phoneNumber}</span></a>`r`n    </nav>`r`n    <div className="mobile-nav-links flex items-center justify-center gap-2 border-t border-[#b89572]/15 bg-[#242424]/75 px-5 py-3 lg:hidden"><a href="/" className="rounded-sm px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#eee8df]">Home</a><a href="/services" className="rounded-sm px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#eee8df]">Services</a><a href="/about" className="rounded-sm px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#eee8df]">About</a></div>`r`n  </>;
+}
+
+function SiteFooter() {
+  return <footer className="border-t border-[#b89572]/15 flint-footer-texture px-5 py-10 text-sm text-[#d5ccc0] sm:px-8 lg:px-14 xl:px-20"><div className="grid gap-8 md:grid-cols-4"><a href="/" className="inline-block" aria-label="FLINT Plumbing home"><span className="block text-3xl font-black uppercase tracking-[0.28em] text-white">FLINT.</span><span className="mt-2 block text-[11px] font-semibold uppercase tracking-[0.42em] text-[#b89572]">Plumbing</span></a><p>Plumbing<br />Heating<br />Bathrooms</p><p>{phoneNumber}<br />flint.plumbing.heating@gmail.com</p><p>Newcastle<br />Cramlington<br />Northumberland</p></div></footer>;
+}
+
