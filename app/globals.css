@@ -35,6 +35,16 @@ body {
   background-size: auto 100%;
 }
 
+@media (max-width: 639px) {
+  .flint-nav-texture {
+    background-image:
+      linear-gradient(90deg, rgba(38, 38, 38, 0.02) 0%, rgba(38, 38, 38, 0.18) 52%, rgba(38, 38, 38, 0.74) 100%),
+      url('/images/flint_nav_banner_logo_left_1536x160.webp');
+    background-position: left center;
+    background-size: auto 82px;
+  }
+}
+
 .flint-footer-texture {
   background-color: #262626;
   background-image:
