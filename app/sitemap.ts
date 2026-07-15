@@ -1,0 +1,28 @@
+import type { MetadataRoute } from "next";
+
+const siteUrl = "https://flintplumbing.co.uk";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date();
+
+  return [
+    {
+      url: siteUrl,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${siteUrl}/services`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/about`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+  ];
+}

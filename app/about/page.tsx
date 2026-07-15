@@ -11,23 +11,11 @@ const navItems = [["Home", "/"], ["Services", "/services"], ["About", "/about"]]
 
 const introParagraphs = [
   "FLINT Plumbing is a local plumbing and heating company built around honest work, fair prices and treating every customer properly.",
-  "The aim is simple: give clear advice, do quality work, and never take advantage of customers when they need help. Whether it is a small repair, heating issue, bathroom job or emergency call-out, the focus is always on finding the right solution at a fair price.",
   "We work with homeowners and local property contacts across Newcastle, Cramlington, Northumberland and the surrounding North East areas.",
-];
-
-const detailSections = [
-  [
-    "Qualified engineers",
-    "Reliable workmanship matters on every job. All engineers are qualified and experienced in the plumbing industry, with ACS and City & Guilds training, plus Gas Safe registered engineers for relevant gas work.",
-  ],
-  [
-    "Landlords and letting agents",
-    "FLINT works with landlords and letting agents who need dependable plumbing support for rental properties, maintenance call-outs, repairs and clear communication when tenants need help quickly.",
-  ],
-  [
-    "Local community",
-    "As a local business, FLINT is proud to work within the local community. The goal is to build long-term trust by being approachable, fair, respectful and consistent on every visit.",
-  ],
+  "We work with landlords and letting agents, carrying out dependable plumbing work for rental properties, maintenance call-outs and repairs when tenants need help quickly.",
+  "All engineers are qualified, experienced and trained to ACS and City & Guilds standards, with Gas Safe registered engineers for relevant gas work.",
+  "The aim is simple: clear advice, quality work and fair solutions without pressure.",
+  "As a local business, FLINT is proud to work within the local community. The goal is to build long-term trust by being approachable, fair, respectful and consistent on every visit.",
 ];
 
 const values = [
@@ -83,18 +71,6 @@ export default function AboutPage() {
                   {title}
                 </h2>
                 <p className="mt-3 line-clamp-4 text-xs leading-5 text-[#d5ccc0] [overflow-wrap:anywhere] sm:mt-4 sm:line-clamp-none sm:text-sm sm:leading-7 sm:[overflow-wrap:normal]">{text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="px-4 pb-10 sm:px-8 sm:pb-12 lg:px-14 xl:px-20">
-          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
-            {detailSections.map(([title, text]) => (
-              <article key={title} className="min-w-0 rounded-lg border border-[#b89572]/25 flint-card-texture p-4 sm:p-8">
-                <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#b89572] sm:text-[11px] sm:tracking-[0.24em]">FLINT standard</p>
-                <h2 className="mt-2 text-[15px] font-black uppercase leading-tight text-white [overflow-wrap:anywhere] sm:mt-4 sm:text-2xl sm:[overflow-wrap:normal]">{title}</h2>
-                <p className="mt-3 line-clamp-4 text-xs leading-5 text-[#d5ccc0] [overflow-wrap:anywhere] sm:mt-5 sm:line-clamp-none sm:text-sm sm:leading-7 sm:[overflow-wrap:normal]">{text}</p>
               </article>
             ))}
           </div>
