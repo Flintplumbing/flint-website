@@ -195,13 +195,13 @@ export default function Home() {
                   </Link>
                 </div>
 
-                <div id="trust" className="mt-8 grid grid-cols-4 overflow-hidden rounded-md border border-white/10 bg-[#2b2b2b]/78 sm:mt-10 sm:gap-4 sm:overflow-visible sm:rounded-none sm:border-0 sm:bg-transparent sm:grid-cols-4">
+                <div id="trust" className="mt-8 grid grid-cols-4 overflow-hidden rounded-md border border-white/10 bg-[#2b2b2b]/78 sm:mt-10 sm:w-[760px] sm:max-w-none sm:gap-6 sm:overflow-visible sm:rounded-none sm:border-0 sm:bg-transparent lg:w-[820px] sm:grid-cols-4">
                   {trustItems.map((item) => (
-                    <div key={item.title} className="flex min-h-24 flex-col items-center justify-center gap-2 border-r border-[#b89572]/20 px-2 text-center last:border-r-0 sm:min-h-0 sm:flex-row sm:justify-start sm:gap-4 sm:px-0 sm:text-left">
+                    <div key={item.title} className="flex min-h-24 flex-col items-center justify-center gap-2 border-r border-[#b89572]/20 px-3 text-center last:border-r-0 sm:min-h-0 sm:flex-row sm:justify-start sm:gap-4 sm:border-r-0 sm:px-0 sm:text-left">
                       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#b89572] text-[#b89572] sm:h-11 sm:w-11">
                         <Icon name={item.icon} className="h-5 w-5" />
                       </span>
-                      <span>
+                      <span className="min-w-0">
                         <span className="block text-[8px] font-bold uppercase leading-3 tracking-[0.07em] text-white sm:text-[11px] sm:leading-normal sm:tracking-[0.14em]">
                           {item.title}
                         </span>
@@ -451,3 +451,6 @@ function Icon({ name, className = "h-6 w-6" }: { name: string; className?: strin
       return <svg viewBox="0 0 24 24" className={className} {...common}><circle cx="12" cy="12" r="8" /></svg>;
   }
 }
+
+
+

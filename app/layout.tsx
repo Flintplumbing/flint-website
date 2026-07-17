@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 
 const siteUrl = "https://flintplumbing.co.uk";
@@ -12,7 +12,7 @@ const businessStructuredData = {
   telephone: "+447932423309",
   email: "flint.plumbing.heating@gmail.com",
   description: siteDescription,
-  priceRange: "££",
+  priceRange: "Â£Â£",
   areaServed: [
     "Newcastle",
     "Cramlington",
@@ -47,6 +47,10 @@ export const metadata: Metadata = {
     template: "%s | FLINT. Plumbing & Heating",
   },
   description: siteDescription,
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   alternates: {
     canonical: "/",
   },
@@ -111,3 +115,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+
